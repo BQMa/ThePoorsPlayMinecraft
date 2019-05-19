@@ -11,10 +11,15 @@
 * 你可以跳过安装官网客户端那一步直接从启动器安装游戏.
 ### 服务器端
 * 现在道了服务器端的配置. 去官网下载java版的服务器(https://www.minecraft.net/zh-hans/download/server/), 之后用
-```java
+```bash
 java -jar server.jar
 ```
 启动, 之后显示没同意什么eula协议, 退出. 
-* 然后发现文件夹中多了一个 eula.txt, 打开, 把 eula 选项改为 true. 再用 java -Xms1024M -Xmx16384M -jar server.jar 启动, 启动成功. 上一句话中的 -Xms1024M -Xmx16384 意思是开始分配 512Mb 内存, 最多分配 4096Mb 内存, 可以根据自己的情况更改.
-* 然后试图用客户端连接服务器, 显示错误, 其原因是你没有交保护费, server那边一验证就不接受. 解决方法是打开 server.properties 文件, 把onlinemode改成false即可.
-* 成功.
+* 然后发现文件夹中多了一个 eula.txt, 打开, __把 eula 选项改为 true__. 再用 
+```bash
+java -Xms1024M -Xmx16384M -jar server.jar
+```
+启动. 上一句话中的 "-Xms1024M -Xmx16384" 的意思是一开始分配 512Mb 内存, 最多分配 4096Mb 内存, 可以根据自己的情况更改.
+* 然后试图用客户端选择多人模式添加服务器, 显示错误(Invalid Session), 其原因是你没有交保护费, server那边会核对帐号有没有交过钱, 没交过就不接受. __解决方法是打开 server.properties 文件, 找到 "onlinemode" 并改成 false 即可__.
+* 用客户端连接, 成功.
+### 更多的问题请提交 issue
