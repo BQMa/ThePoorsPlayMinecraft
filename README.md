@@ -10,7 +10,7 @@
 * 至此,你应该已经可以玩单机版的游戏并且同局域网内的伙伴联机了.
 * 你可以跳过安装官网客户端那一步直接从启动器安装游戏.
 ### 服务器端
-* 现在道了服务器端的配置. 去官网下载java版的服务器(https://www.minecraft.net/zh-hans/download/server/), 之后用
+* 现在到了服务器端的配置. 去官网下载java版的服务器(https://www.minecraft.net/zh-hans/download/server/), 之后用
 ```bash
 java -jar server.jar
 ```
@@ -19,7 +19,8 @@ java -jar server.jar
 ```bash
 java -Xms1024M -Xmx16384M -jar server.jar
 ```
-启动. 上一句话中的 "-Xms1024M -Xmx16384" 的意思是一开始分配 512Mb 内存, 最多分配 4096Mb 内存, 可以根据自己的情况更改.
+启动. 上一句话中的 "-Xms1024M -Xmx16384" 的意思是一开始分配 512Mb 内存, 最多分配 4096Mb 内存, 可以根据自己的情况更改. 如果是无头服务器可以在最后加上 nogui 以关闭图形化界面(那个界面很轻关不关无所谓).
 * 然后试图用客户端选择多人模式添加服务器, 显示错误(Invalid Session), 其原因是你没有交保护费, server那边会核对帐号有没有交过钱, 没交过就不接受. __解决方法是打开 server.properties 文件, 找到 "onlinemode" 并改成 false 即可__.
 * 用客户端连接, 成功.
+* 如何退出ssh后让程序继续运行? 请自行谷歌(答案是在后面加 & 或者用 screen 这个工具).
 ### 更多的问题请提交 issue
