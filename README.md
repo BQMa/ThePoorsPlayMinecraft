@@ -24,9 +24,20 @@ java -Xms1024M -Xmx16384M -jar server.jar
 * 然后试图用客户端选择多人模式添加服务器填写服务器ip, 显示错误(Invalid Session), 其原因是你没有交保护费, server那边会核对帐号有没有交过钱, 没交过就不接受. __解决方法是打开 server.properties 文件, 找到 "onlinemode" 并改成 false 即可__.
 * 用客户端连接, 成功.
 * 如何退出ssh后让程序继续运行? 请自行谷歌(答案是在后面加 & 或者用 screen 这个工具).
-* 全部 server.properties 中选项的含义见 https://minecraft.gamepedia.com/Server.properties.
+* 全部 server.properties 中选项的含义见 https://minecraft.gamepedia.com/Server.properties. 下面列出一些比较有用的设置:
+###### server.properties 中部分设置
+|设置名|含义|备注|
+|-----|---|----|
+|difficulty|难度|peaceful, easy, normal, hard|
+|gamemode|游戏模式|survival, creative, adventure, spectator|
+|level-name|存档名|更换这个就是更换存档了|
+|level-seed|生成世界的种子||
+|max-players|最大玩家数量|如果服务器内存少就设置得低一些|
+|max-world-size|世界半径(2000就是生成4000乘4000的世界)|如果服务器内存少就设置得低一些|
+|motd|客户端服务器列表中在server name下方显示的信息|可以改成有特点的名字|
+|online-mode|是否检查客户端为合法注册帐号|改成false就行了|
+|pvp|Player versus Player(队友伤害)|改成flase以关闭|
 ### 我的问题
 * server.properties 似乎可以更改服务器端口, 但是不是默认端口之后客户端应当如何设置呢?
-* 如何让服务器保存很多个世界并选择启动哪一个?
 * 如何添加客户端链接密码防止不是小伙伴的人进来?
 ### 更多的问题请提交 issue
