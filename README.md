@@ -31,7 +31,7 @@ java -Xms1024M -Xmx16384M -jar server.jar
 |difficulty|难度|peaceful, easy, normal, hard|
 |gamemode|游戏模式|survival, creative, adventure, spectator|
 |level-name|存档名|更换这个就是更换存档了|
-|level-seed|生成世界的种子||
+|level-seed|生成世界的种子|可以去 https://minecraft-zh.gamepedia.com/%E7%A7%8D%E5%AD%90%EF%BC%88%E4%B8%96%E7%95%8C%E7%94%9F%E6%88%90%EF%BC%89 获取更多信息|
 |max-players|最大玩家数量|如果服务器内存少就设置得低一些|
 |max-world-size|世界半径(2000就是生成4000乘4000的世界)|如果服务器内存少就设置得低一些|
 |motd|客户端服务器列表中在server name下方显示的信息|可以改成有特点的名字|
