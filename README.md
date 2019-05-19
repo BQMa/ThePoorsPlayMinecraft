@@ -10,7 +10,11 @@
 * 至此,你应该已经可以玩单机版的游戏并且同局域网内的伙伴联机了.
 * 你可以跳过安装官网客户端那一步直接从启动器安装游戏.
 ### 服务器端
-* 服务器端去官网 https://www.minecraft.net/zh-hans/download/server/ 下载java版的服务器, 之后 java -jar server.jar 启动, 之后显示没同意什么eula协议, 退出. 
-* 然后发现文件夹中多了一个 eula.txt, 打开, 把对应选项改了. 再用 java -Xms1024M -Xmx16384M -jar server.jar 启动, 启动成功. 上一句话中的 -Xms1024M -Xmx16384 意思是开始分配 512Mb 内存, 最多分配 4096Mb 内存, 可以根据自己的情况更改.
+* 现在道了服务器端的配置. 去官网下载java版的服务器(https://www.minecraft.net/zh-hans/download/server/), 之后用
+```java
+java -jar server.jar
+```
+启动, 之后显示没同意什么eula协议, 退出. 
+* 然后发现文件夹中多了一个 eula.txt, 打开, 把 eula 选项改为 true. 再用 java -Xms1024M -Xmx16384M -jar server.jar 启动, 启动成功. 上一句话中的 -Xms1024M -Xmx16384 意思是开始分配 512Mb 内存, 最多分配 4096Mb 内存, 可以根据自己的情况更改.
 * 然后试图用客户端连接服务器, 显示错误, 其原因是你没有交保护费, server那边一验证就不接受. 解决方法是打开 server.properties 文件, 把onlinemode改成false即可.
 * 成功.
