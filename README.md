@@ -38,6 +38,9 @@ java -Xms1024M -Xmx16384M -jar server.jar
 |online-mode|是否检查客户端为合法注册帐号|改成false就行了|
 |pvp|Player versus Player(队友伤害)|改成flase以关闭|
 ### 我的问题
+* 当网络环境不好(ping>400ms)时, 程序会卡在加载地形的那一步最后退出(似乎默认timeout是20s), 最气人的是程序有时候加载出了地形还是会因为timeout退出.
 * server.properties 似乎可以更改服务器端口, 但是不是默认端口之后客户端应当如何设置呢?
 * 如何添加客户端链接密码防止不是小伙伴的人进来?
+### Notes
+* 也可以在启动java时添加 -Dfml.ignoreInvalidMinecraftCertificates=true 选项来关闭是否交了钱的验证.
 ### 更多的问题请提交 issue
