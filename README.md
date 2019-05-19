@@ -24,6 +24,12 @@ java -Xms1024M -Xmx16384M -jar server.jar
 * 然后试图用客户端选择多人模式添加服务器填写服务器ip, 显示错误(Invalid Session), 其原因是你没有交保护费, server那边会核对帐号有没有交过钱, 没交过就不接受. __解决方法是打开 server.properties 文件, 找到 "onlinemode" 并改成 false 即可__.
 * 用客户端连接, 成功.
 * 如何退出ssh后让程序继续运行? 请自行谷歌(答案是在后面加 & 或者用 screen 这个工具).
+* 已知的 server.properties 中选项意义如下:
+###### 已知的 server.properties 中选项的意义
+|字段|意义|备注|
+|---|----|---|
+|online-mode|是否验证客户端交没交钱|false是不验证|
+|motd|客户端添加server连接成功之后界面上显示的名字|可以改成有特点的方便别人认|
 ### 我的问题
 * server.properties 似乎可以更改服务器端口, 但是不是默认端口之后客户端应当如何设置呢?
 * 如何让服务器保存很多个世界并选择启动哪一个?
