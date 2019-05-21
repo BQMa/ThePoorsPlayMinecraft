@@ -39,7 +39,7 @@ java -Xms1024M -Xmx16384M -jar server.jar
 |pvp|Player versus Player(队友伤害)|改成flase以关闭|
 ### 我的问题
 * 当网络环境不好(ping>400ms)时, 程序会卡在加载地形的那一步最后退出(似乎默认timeout是20s), 最气人的是程序有时候加载出了地形还是会因为timeout退出.
-* > #### server.properties 似乎可以更改服务器端口, 但是不是默认端口之后客户端应当如何设置呢?
+> #### server.properties 似乎可以更改服务器端口, 但是不是默认端口之后客户端应当如何设置呢?
 > #### 答: 在MC客户端中填入ip时在后面加上":port"就可以了
 * 如何添加客户端链接密码防止不是小伙伴的人进来?
 ### Notes
