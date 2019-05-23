@@ -45,4 +45,5 @@ java -Xms1024M -Xmx16384M -jar server.jar
 答: 在MC客户端中填入ip时在后面加上":port"就可以了, 但是并未尝试端口号与冒号之间隔一个空格是否能识别, 也没有尝试全角冒号是否能识别(大概率是不可以)。
 ### Notes
 * 也可以在启动java时添加 -Dfml.ignoreInvalidMinecraftCertificates=true 选项来关闭是否交了钱的验证.
+* 仓库中有一个名为 getServerinfo.py 的脚本演示了如何获得服务器的基本信息, 但是我并不清楚客户端和服务器交流时所交换的一系列比特流的含义.
 ### 更多的问题请提交 issue
