@@ -4,7 +4,7 @@ import socket
 
 def getinfo():
     s=socket.socket()
-    iport=("cattau.dynv6.net",25565)
+    iport=("host or ip",port in int)
     s.connect(iport)
     print("connected to %s"%(str(iport)))
     msg1=bytes.fromhex("1700e003106361747461752e64796e76362e6e657463dd010100") #length=24+2
