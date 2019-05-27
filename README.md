@@ -46,5 +46,5 @@ java -Xms1024M -Xmx16384M -jar server.jar
 答: 在MC客户端中填入ip时在后面加上":port"就可以了, 但是并未尝试端口号与冒号之间隔一个空格是否能识别, 也没有尝试全角冒号是否能识别(大概率是不可以)。
 ### Notes
 * 也可以在启动java时添加 -Dfml.ignoreInvalidMinecraftCertificates=true -Dfml.ignorePatchDiscrepancies=true 选项来关闭正版验证.
-来源: https://minecraft-zh.gamepedia.com/%E6%95%99%E7%A8%8B/%E7%BC%96%E5%86%99%E5%90%AF%E5%8A%A8%E5%99%A8
+来源: [教程/编写启动器](https://minecraft-zh.gamepedia.com/%E6%95%99%E7%A8%8B/%E7%BC%96%E5%86%99%E5%90%AF%E5%8A%A8%E5%99%A8)
 ### 更多的问题请提交 issue
