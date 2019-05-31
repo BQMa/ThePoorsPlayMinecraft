@@ -1,9 +1,10 @@
 #!/bin/bash
-date +"%F %R" >> gitlog
-git add . 1>>gitlog 2>&1 &&
-echo "finish add" >> gitlog &&
-git commit -m "`date +"%F %R"`" 1>>gitlog 2>&1 &&
-echo "finish commit" >> gitlog &&
-git push 1>>gitlog 2>&1 &&
-echo "finish push" >> gitlog
-echo >> gitlog
+GITLOG="gitlog"
+date +"%F %R" >> $GITLOG
+git add . 1>>$GITLOG 2>&1 &&
+echo "finish add" >> $GITLOG &&
+git commit -m "`date +"%F %R"`" 1>>$GITLOG 2>&1 &&
+echo "finish commit" >> $GITLOG &&
+git push 1>>$GITLOG 2>&1 &&
+echo "finish push" >> $GITLOG
+echo >> $GITLOG
